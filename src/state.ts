@@ -14,7 +14,8 @@ export const state = {
         app: '',
         registry: '',
         context: '',
-        branch: null
+        branch: null,
+        useRadixCI: false
     },
     environment: {
         RADIX_API: `https://api.radix.equinor.com/api/v1`,

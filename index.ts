@@ -73,6 +73,7 @@ function parseGithub(): Options {
     opts.registry = core.getInput('registry');
     opts.context = core.getInput('context');
     opts.branch = core.getInput('branch');
+    opts.useRadixCI = core.getInput('useRadixCI');
     switch ( core.getInput('action') ) {
       case 'create':
         opts.createEnvironment = true;
