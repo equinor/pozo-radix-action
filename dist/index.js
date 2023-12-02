@@ -95394,11 +95394,12 @@ function getComponentConfig(components, env, branch) {
             const template = componentTemplate[comp.name];
             const config = Object.assign({}, template);
             config.environment = env;
-            if (config.imageTagName) {
-                config.imageTagName = config.imageTagName.replace('{ENVIRONMENT}', env);
-            }
-            else if (!branch) {
-                config.imageTagName = env;
+            if (!state_state.options.useRadixCI) {
+                if (config.imageTagName) {
+                    config.imageTagName = config.imageTagName.replace('{ENVIRONMENT}', env);
+                } else if (!branch) {
+                    config.imageTagName = env;
+                }
             }
             const variables = yield getVariables(comp.name, env);
             if (variables) {
@@ -95752,6 +95753,7 @@ function parseGithub() {
         opts.registry = core.getInput('registry');
         opts.context = core.getInput('context');
         opts.branch = core.getInput('branch');
+        opts.useRadixCI = core.getInput('useRadixCI');
         switch (core.getInput('action')) {
             case 'create':
                 opts.createEnvironment = true;
