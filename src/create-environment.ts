@@ -47,12 +47,19 @@ async function getComponentConfig(components: Component[], env: string, branch?:
         const config = { ...template };
         config.environment = env;
 
+        // if (!state.options.useRadixCI) {
+        //     if (config.imageTagName) {
+        //         config.imageTagName = config.imageTagName.replace('{ENVIRONMENT}', env);
+        //     } else if (!branch) {
+        //         config.imageTagName = env;
+        //     }
+        // }
+
         if (!state.options.useRadixCI) {
-            if (config.imageTagName) {
-                config.imageTagName = config.imageTagName.replace('{ENVIRONMENT}', env);
-            } else if (!branch) {
-                config.imageTagName = env;
-            }
+            config.imageTagName = 'hmmm';
+        }
+        else {
+            config.imageTagName = 'oioiu';
         }
 
         const variables = await getVariables(comp.name, env);
