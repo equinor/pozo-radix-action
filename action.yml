@@ -26,6 +26,9 @@ inputs:
   debug:
     description: 'Print out additional information'
     required: false
+  useRadixCI:
+    description: 'Build in Radixs pipeline'
+    required: false
 outputs:
   exists: # id of output
     description: 'Prints if check-environment is ran. Returns true or false'

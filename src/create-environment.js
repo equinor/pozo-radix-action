@@ -54,19 +54,14 @@ function getComponentConfig(components, env, branch) {
             const template = componentTemplate[comp.name];
             const config = Object.assign({}, template);
             config.environment = env;
-            // if (!state.options.useRadixCI) {
-            //     if (config.imageTagName) {
-            //         config.imageTagName = config.imageTagName.replace('{ENVIRONMENT}', env);
-            //     } else if (!branch) {
-            //         config.imageTagName = env;
-            //     }
-            // }
             if (!state.options.useRadixCI) {
-                config.imageTagName = 'hmmm';
+                if (config.imageTagName) {
+                    config.imageTagName = config.imageTagName.replace('{ENVIRONMENT}', env);
+                } else if (!branch) {
+                    config.imageTagName = env;
+                }
             }
-            else {
-                config.imageTagName = 'oioiu';
-            }
+
             const variables = yield getVariables(comp.name, env);
             if (variables) {
                 config.variables = variables;
