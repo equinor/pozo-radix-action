@@ -1,5 +1,7 @@
 # Azure keyvault secret-expiry checker
 
+[![SCM Compliance](https://scm-compliance-api.radix.equinor.com/repos/equinor/pozo-radix-action/badge)](https://scm-compliance-api.radix.equinor.com/repos/equinor/pozo-radix-action/badge)
+
 #### Azure setup
 Create a Service Principal:  
 `az ad sp create-for-rbac -n <your-application-name> --skip-assignment`
