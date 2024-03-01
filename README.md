@@ -237,3 +237,6 @@ jobs:
 #### Building:
 Builds are performed with [@vercel/ncc](https://www.npmjs.com/package/@vercel/ncc):  
 `ncc build index.ts --license licenses.txt`
+
+## Contributing
+Contact repository owner if wish to contribute.
