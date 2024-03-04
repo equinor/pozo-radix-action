@@ -1,6 +1,6 @@
 # Azure keyvault secret-expiry checker
 
-[![SCM Compliance](https://scm-compliance-api.radix.equinor.com/repos/equinor/pozo-radix-action/badge)](https://scm-compliance-api.radix.equinor.com/repos/equinor/pozo-radix-action/badge)
+[![SCM Compliance](https://scm-compliance-api.radix.equinor.com/repos/equinor/pozo-radix-action/badge)](https://developer.equinor.com/governance/scm-policy/)
 
 #### Azure setup
 Create a Service Principal:  
